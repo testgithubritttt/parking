@@ -1,0 +1,10 @@
+import express from 'express';
+const router = express.Router();
+import { adminArea, editDataByAdmin } from '../authController/adminController.js';
+import { checkUserRole } from '../middleware/authorization.js';
+// import { checkValidation } from '../middleware/userValidation.js';
+import { authenticateToken } from '../middleware/authentication.js';
+router.use(express.json());
+router.post('/area', authenticateToken, checkUserRole('2'), adminArea);
+router.put('/editData/:id', authenticateToken, checkUserRole('2'), editDataByAdmin);
+export default router;
