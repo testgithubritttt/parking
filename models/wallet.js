@@ -1,12 +1,11 @@
-import { Schema as schema, model } from "mongoose";
-const Schema = schema;
+import { Schema, model } from "mongoose";
 
 const walletSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        unique: true,
         required: true,
+        unique: true, // Ensure uniqueness based on user
     },
     balance: {
         type: Number,

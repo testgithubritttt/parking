@@ -1,5 +1,5 @@
-import Area from '../model/areamodel.js';
-import userdb from '../model/usermodel.js'
+import Area from '../models/areamodel.js';
+import userdb from '../models/usermodel.js'
 const adminArea = async (req, res) => {
   try {
     const { areaName, totalSlots } = req.body;

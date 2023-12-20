@@ -1,9 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
-import UserRoute from './authRoute/UserRoute.js';
-import adminRoutes from './authRoute/adminRoute.js';
-import superAdminRoutes from './authRoute/superAdminroute.js';
+import UserRoute from './Route/UserRoute.js';
+import adminRoutes from './Route/adminRoute.js';
+import superAdminRoutes from './Route/superAdminroute.js';
 import connectDB from './config/dbConnection.js';
 const app = express();
 app.use(express.json());
