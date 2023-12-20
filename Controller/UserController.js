@@ -4,7 +4,7 @@ import Area from '../models/areamodel.js';
 import Parkingslot from '../models/parkingSlot.js';
 import SlotParkedUser from '../models/parkedUser.js';
 import sendMail from "../helpers/sendMail.js";
-import TransactionHistory`~` from '../models/transactionHistory.js';
+import TransactionHistory from '../models/transactionHistory.js';
 import {messages, responseStatus, statusCode} from '../core/constant/constant.js';
 import Payment from '../models/payment.js';
 import bcrypt from 'bcrypt';
